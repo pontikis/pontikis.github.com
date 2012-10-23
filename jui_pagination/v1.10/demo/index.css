@@ -1,0 +1,60 @@
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* -------------------------------------------------------------------------- */
+.container1 {
+    width: 500px;
+    padding: 10px;
+}
+
+.container1_alt {
+    width: 700px;
+    padding: 40px;
+    border: solid blue 1px;
+}
+
+.slider1 {
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+.tools {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+.wrap2 {
+    overflow: auto;
+    width: 850px;
+    margin-top: 20px;
+}
+
+.list2 {
+    width: 800px;
+    height: 200px;
+    border: solid black 1px;
+    float: left;
+}
+
+.slider2 {
+    height: 170px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.navpane2 {
+    width: 790px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+/* -------------------------------------------------------------------------- */
