@@ -5,7 +5,7 @@
  *               <br />Project page <a href="http://pontikis.net/labs/jui_pagination">http://pontikis.net/labs/jui_pagination</a>
  * @version 2.0.0 (22 Jan 2013)
  * @author Christos Pontikis http://pontikis.net
- * @requires jquery, jquery-ui, jquery.ui.touch-punch.min.js (for touch event support)
+ * @requires jquery >= 1.6, jquery-ui >= 1.8
  */
 
 /**
@@ -179,7 +179,7 @@
                     } else if(value == 'slider') {
                         if(useSlider && sliderInsidePane) {
                             elem_slider = $("#" + slider_id);
-                            if(typeof(elem_slider.data("slider")) == 'object') {
+                            if(typeof(elem_slider.data("slider")) == 'object' || typeof(elem_slider.data("uiSlider")) == 'object') {
                                 elem_slider.slider('destroy');
                                 elem_slider.html('');
                             }
@@ -372,7 +372,7 @@
 
                     if(sliderElementID) {
                         selector = "#" + create_id(settings.slider_id_prefix, container_id);
-                        if(typeof($(selector).data("slider")) == 'object') {
+                        if(typeof($(selector).data("slider")) == 'object' || typeof($(selector).data("uiSlider")) == 'object') {
                             $(selector).slider('destroy');
                             $(selector).html('');
                         }
@@ -395,7 +395,7 @@
 
                 } else {
                     elem_slider = $("#" + slider_id);
-                    if(typeof(elem_slider.data("slider")) == 'object') {
+                    if(typeof(elem_slider.data("slider")) == 'object' || typeof(elem_slider.data("uiSlider")) == 'object') {
                         elem_slider.slider('destroy');
                         elem_slider.html('');
                     }
@@ -420,8 +420,6 @@
 
                         elem_pref_dialog.dialog({
                             autoOpen: true,
-                            show: "blind",
-                            hide: "explode",
                             position: {
                                 my: "top",
                                 at: "bottom",
@@ -433,7 +431,7 @@
                                     text: rsc_jui_pag.preferences_close,
                                     click: function() {
                                         $(this).dialog("close");
-                                        $(this).dialog("destroy");
+                                        //$(this).dialog("destroy");
                                     }
                                 }
                             ],
@@ -1005,7 +1003,7 @@
         // update slider if exists
         if(update_slider) {
             var elem_slider = $("#" + slider_id);
-            if(typeof(elem_slider.data("slider")) == 'object') {
+            if(typeof(elem_slider.data("slider")) == 'object' || typeof(elem_slider.data("uiSlider")) == 'object') {
                 elem_slider.slider({
                     'value': (sliderOrientation == 'horizontal' ? goto_page : totalPages - goto_page + 1)
                 });
