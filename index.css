@@ -1,7 +1,16 @@
+#jdg_prev {
+    display: none;
+}
+
 #jfr_prev {
     display: none;
 }
 
 #jdr_prev {
     display: none;
+}
+
+.sw_link {
+    font-size: 14px;
+    color: gray;
 }
