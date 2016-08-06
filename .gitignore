@@ -1,2 +1,4 @@
 # JetBrains phpStorm IDE files -------------------------------------------------
 /.idea/*
+
+/.htaccess
